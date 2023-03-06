@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link
+      rel="preload"
+      href="font/Roboto-Black.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="font/Roboto-Black.woff"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="font/Roboto-Light.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="font/Roboto-Light.woff"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
+    <title>Rools margin & padding</title>
+  </head>
+  <body>
+    <article>
+      <header class="header">
+        <div class="container">
+          <h1 class="header-title">Отступы в вёрстке: margin и padding</h1>
+          <p class="header-text">
+            В этой статье я рассмотрю самые популярные "стандартные" решения для
+            сохранения смысла и хорошей читаемости вашего кода. Если точнее —
+            речь пойдет об основных правилах организации отступов. Они сильно
+            влияют на общую функциональность кода и, если всё сделано верно,
+            позволяют легко вносить изменения в любую его часть. При этом другие
+            части кода продолжат нормально работать.
+          </p>
+          <p class="header-text">
+            Как это часто бывает, знание базовых принципов поможет проявить
+            гибкость и выйти за их пределы. Эти знания особенно важны для
+            начинающих, но также будут полезным напоминанием и для более опытных
+            верстальщиков. Итак, поговорим о фундаментальных основах работы с
+            отступами в вёрстке.
+          </p>
+        </div>
+      </header>
+      <section class="content section">
+        <div class="container">
+          <div class="container__gray ">
+            <h2 class="content-title">Содержание</h2>
+            <ol class="content-list">
+              <li class="content-list__item">
+                <a class="content-list__item-link" href=""
+                  >Отступ задается от предыдущего элемента к следующему</a
+                >
+              </li>
+              <li class="content-list__item">
+                <a class="content-list__item-link" href=""
+                  >Отступ задается последнему возможному элементу в
+                  DOM-дереве</a
+                >
+              </li>
+              <li class="content-list__item">
+                <a class="content-list__item-link" href=""
+                  >Для последнего элемента группы отступ обнуляется</a
+                >
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section class="first section">
+        <div class="container">
+          <h2 class="first-title rools-title">
+            Отступ задается от предыдущего элемента к следующему: от первого ко
+            второму, сверху вниз, слева направо.
+          </h2>
+          <img class="first-img" src="img/image_1.png" alt="" />
+          <div class="first-block">
+            <p class="first-block__text">
+              <strong>ВАЖНО:</strong> <i>margin</i> всегда задают от предыдущего
+              элемента к следующему.
+            </p>
+            <p class="first-block__text">
+              Свойство <i>margin</i> необходимо только для того, чтобы
+              отодвинуть своего соседа справа или снизу, поэтому используется
+              <i> margin-right</i> и <i>margin-bottom</i> .
+            </p>
+            <p class="first-block__text">
+              (!) Свойства <i>margin-left</i> <i>margin-top</i>
+              и используются крайне редко.
+            </p>
+            <p class="first-block__text">
+              Для <i>padding</i> верно обратное. Исключением является его
+              применения в декоративных целях, например, для увеличения области
+              ссылки.
+            </p>
+          </div>
+
+          <div class="first-block first-block__right">
+            <p class="first-block__text">
+              Отступ внутри блока сверху или слева реализуется через padding-top
+              и padding-left родителя.
+            </p>
+            <p class="first-block__text">
+              Отступы, как правило, делают в направлении от предыдущего элемента
+              к следующему. Так элемент не будет толкать сам себя.
+            </p>
+            <p class="first-block__text">
+              Изначально элемент статичен, а его положение может меняться только
+              под воздействием свойств других блоков или свойств родителя.
+            </p>
+          </div>
+          <img src="img/image 2.png" alt="" />
+        </div>
+      </section>
+      <section class="second section">
+        <div class="container">
+          <h2 class="second-title rools-title">
+            Отступ задается последнему возможному элементу в DOM-дереве
+          </h2>
+          <p class="second-text">
+            Вообще, margin задают исключительно между соседними элементами
+            DOM-дерева. Для примера, посмотрите на этот список:
+          </p>
+          <img
+            class="second-img"
+            src="img/image 3.png"
+            alt="Примеры с отступами"
+          />
+          <img
+            class="second-img"
+            src="img/image 4.png"
+            alt="Примеры с отступами"
+          />
+          <p class="second-text">
+            Отступ делают за счёт соседних элементов, а не дочерних:
+          </p>
+          <img
+            class="second-img"
+            src="img/image 5.png"
+            alt="Примеры с отступами"
+          />
+          <p class="second-text">
+            Казалось бы, можно задать отступ параграфу, либо обёртке для
+            достижения той же цели. Внешне останется все точно также, но так
+            делать не рекомендуется.
+          </p>
+          <p class="second-text">
+            Предыдущий пример был достаточно простым, но бывает вложенность
+            значительно больше.
+          </p>
+          <img
+            class="second-img"
+            src="img/image 6.png"
+            alt="Примеры с отступами"
+          />
+          <p class="second-text">
+            В случае с заголовком, если ему необходим отступ сверху, последним
+            элементом будет section. Именно для него задается padding-top, а не
+            div с классом container. Свойства margin, которые стоят по умолчанию
+            необходимо обнулить.
+          </p>
+          <img
+            class="second-img"
+            src="img/image 7.png"
+            alt="Примеры с отступами"
+          />
+          <p class="second-text">
+            Это необходимо для более простого поиска отступов в будущем — для
+            вас или того, кто будет верстать после вас. Кроме того, возможны
+            серьёзные проблемы при динамическом дублировании или выводе вёрстки
+            с нестандартной структурой отступов.
+          </p>
+        </div>
+      </section>
+      <section class="third section">
+        <div class="container">
+          <h2 class="third-title rools-title">
+            Для последнего элемента группы отступ всегда обнуляется
+          </h2>
+          <p class="third-text">
+            Для наглядности возьмём наш предыдущий пример с рецептами
+          </p>
+          <p class="third-text">
+            Между рецептами расстояние одинаковое. Можно заметить, что и до
+            следующего блока расстояние такое же.
+          </p>
+          <img
+            class="third-img"
+            src="img/image 8.png"
+            alt="Примеры с отступами"
+          />
+          <p class="third-text">
+            В соответствии со вторым принципом: последний margin обнуляется, а
+            нижний отступ задаётся через padding для section. Я чаще всего задаю
+            padding для секции с обоих сторон, если расстояние между секциями
+            100px задаю секциям padding-top:50px и padding-bottom:50px.
+          </p>
+          <img class="third-img" src="img/image 9.png" alt="" />
+          <img class="third-img" src="img/image 10.png" alt="" />
+          <p class="third-text">
+            Для большего понимания рассмотрим другой пример, который часто
+            встречается на практике:
+          </p>
+          <img class="third-img" src="img/image 11.png" alt="" />
+          <img class="third-img" src="img/image 13.png" alt="" />
+          <p class="third-text">
+            Здесь нас интересует отступ между пунктами меню и списком с кнопкой
+            поиска. Отступы между пунктами меню задаются так:
+          </p>
+          <img class="third-img" src="img/image 14.png" alt="" />
+          <p class="third-text">
+            Советую использовать псевдоклассы :last-child чаще других, например
+            так:
+          </p>
+          <img class="third-img" src="img/image 15.png" alt="" />
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="container">
+          <div class="container__gray">
+            <h2 class="footer-title">Подытожим:</h2>
+            <ul class="footer-list">
+              <li class="footer-list__item">отступы задаём от предыдущего элемента к следующему</li>
+              <li class="footer-list__item">используем только margin-right и margin-bottom</li>
+              <li class="footer-list__item">внешние отступы задаются только между соседями</li>
+              <li class="footer-list__item">последнему элементу группы отступ всегда обнуляем</li>
+            </ul>
+            <p class="footer-text">
+              Конечно бывают исключения. Ведь макеты бывают различной сложности.
+              Иногда базовые принципы приходится нарушать в угоду дизайнерского
+              решения или простоты вёрстки. Но для этого эти принципы необходимо
+              хорошо знать.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </article>
+  </body>
+</html>

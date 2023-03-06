@@ -1,0 +1,19 @@
+.second-title {
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 120%;
+}
+
+.second-text {
+    margin-bottom: 30px;
+}
+
+.second-text:last-child {
+    margin-bottom: 0px;
+}
+
+.second-img {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}

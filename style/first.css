@@ -1,0 +1,31 @@
+.first-title {
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 120%;
+}
+
+.first-img {
+    margin-right: 30px;
+    margin-bottom: 30px;
+    width: 560px;
+    display: inline-block;
+}
+
+.first-block {
+    display: inline-block;
+    width: 480px;
+    vertical-align: top;
+}
+
+.first-block__right{
+    margin-right: 30px;
+}
+
+.first-block__text {
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.first-block__text:last-child {
+    margin-bottom: 0;
+}
