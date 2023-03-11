@@ -17,3 +17,26 @@
     margin: 0 auto;
     margin-bottom: 30px;
 }
+
+.second-figure__border {
+    margin: 0 auto;
+    border: 1px solid black;
+    width: 1080px;
+    margin-bottom: 30px;
+}
+
+.second-figure__border-figcaption {
+    margin: 15px 30px;
+}
+
+.second-figure__border-img {
+    margin: 0;
+}
+
+.second-figure {
+    margin-bottom: 30px;
+}
+
+.second-figure:last-child {
+    margin-bottom: 0;
+}

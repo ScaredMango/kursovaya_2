@@ -16,3 +16,10 @@
 .third-img:last-child{
     margin-bottom: 0px;
 }
+.third-figure {
+    margin-bottom: 30px;
+}
+
+.third-figure:last-child {
+    margin-bottom: 0;
+}
