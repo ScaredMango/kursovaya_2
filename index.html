@@ -36,7 +36,7 @@
     <title>Rools margin & padding</title>
   </head>
   <body>
-    <article>
+    <article class="article">
       <header class="header">
         <div class="container">
           <h1 class="header-title">Отступы в вёрстке: margin и padding</h1>
@@ -142,7 +142,7 @@
               DOM-дерева. Для примера, посмотрите на этот список:
             </figcaption>
             <img
-              class="second-img"
+              class="second-img second-img__big"
               src="img/image 3.png"
               alt="Примеры с отступами"
             />
@@ -188,17 +188,19 @@
               умолчанию необходимо обнулить.
             </figcaption>
           </figure>
-          <img
-            class="second-img"
-            src="img/image 7.png"
-            alt="Примеры с отступами"
-          />
-          <p class="second-text">
-            Это необходимо для более простого поиска отступов в будущем — для
-            вас или того, кто будет верстать после вас. Кроме того, возможны
-            серьёзные проблемы при динамическом дублировании или выводе вёрстки
-            с нестандартной структурой отступов.
-          </p>
+          <figure class="second-figure">
+            <img
+              class="second-img"
+              src="img/image 7.png"
+              alt="Примеры с отступами"
+            />
+            <figcaption class="second-text">
+              Это необходимо для более простого поиска отступов в будущем — для
+              вас или того, кто будет верстать после вас. Кроме того, возможны
+              серьёзные проблемы при динамическом дублировании или выводе
+              вёрстки с нестандартной структурой отступов.
+            </figcaption>
+          </figure>
         </div>
       </section>
 
@@ -231,14 +233,22 @@
               padding-bottom:50px.
             </figcaption>
             <img class="third-img" src="img/image 9.png" alt="" />
-            <img class="third-img" src="img/image 10.png" alt="" />
+            <img
+              class="third-img third-img__big"
+              src="img/Одной картинкой.png"
+              alt=""
+            />
           </figure>
           <figure class="third-figure">
             <figcaption class="third-text">
               Для большего понимания рассмотрим другой пример, который часто
               встречается на практике:
             </figcaption>
-            <img class="third-img" src="img/image 11.png" alt="" />
+            <img
+              class="third-img third-img__big"
+              src="img/image 12.jpg"
+              alt=""
+            />
             <img class="third-img" src="img/image 13.png" alt="" />
           </figure>
           <figure class="third-figure">

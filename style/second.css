@@ -6,6 +6,7 @@
 
 .second-text {
     margin-bottom: 30px;
+    text-align: left;
 }
 
 .second-text:last-child {
@@ -13,15 +14,22 @@
 }
 
 .second-img {
-    display: block;
-    margin: 0 auto;
+    /* display: block;
+    margin: 0 auto; */
     margin-bottom: 30px;
+    text-align: center;
+}
+
+.second-img:last-child{
+    margin-bottom: 0px;
+}
+
+.second-img__big {
+    width: 100%;
 }
 
 .second-figure__border {
-    margin: 0 auto;
     border: 1px solid black;
-    width: 1080px;
     margin-bottom: 30px;
 }
 
@@ -30,11 +38,13 @@
 }
 
 .second-figure__border-img {
+    width: 100%;
     margin: 0;
 }
 
 .second-figure {
     margin-bottom: 30px;
+    text-align: center;
 }
 
 .second-figure:last-child {

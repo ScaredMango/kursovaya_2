@@ -32,6 +32,10 @@ body {
     line-height: 120%;
 }
 
+.article{
+    padding-top: 60px;
+    padding-bottom: 50px;
+}
 
 .section {
     padding-top: 50px;
